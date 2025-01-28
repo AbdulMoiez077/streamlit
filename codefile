@@ -1,0 +1,190 @@
+import streamlit as st
+
+#Sidebar
+st.sidebar.title("Portfolio")
+st.sidebar.image("/home/adil/Downloads/image.jpg",width=150,use_column_width=True)
+st.sidebar.title("ABDUL MOIEZ")
+
+tab1,tab2,tab3,tab4,tab5=st.tabs(["Home","About","Project","Skills & Certifications","Contact"])
+
+#Home
+tab1.header("ABDUL MOIEZ TANVEER")
+tab1.subheader("Data Engineer / Data Analyst")
+tab1.subheader("Bio")
+tab1.write("I’m Abdul Moiez, Specializing in Data Science , I've helped clients achieve specific results. My expertise lies in Data Engineering, Data Analyst and Web Scraping.")
+
+
+#About
+tab2.header("Contact-Info")
+tab2.write("**Phone No** : +923071140091")
+tab2.write("**Email** : abdulmoiez077@gmail.com")
+tab2.write("**Address** : Gulshan-e-ravi,Lahore")
+
+tab2.header("Academics")
+
+col1, col2, col3, col4 = tab2.columns(4)
+
+with col1:
+    st.write("**Title**")
+    st.write("Computer Science")
+    st.write("ICS - Physics")
+    st.write("BS - Data Science")
+
+with col2:
+    st.markdown("**Institute**")
+    st.write("Vesper School System")
+    st.write("Punjab Group of Colleges")
+    st.write("University of Central Punjab")
+
+with col3:
+    st.markdown("**Score**")
+    st.write("80%")
+    st.write("90%")
+    st.write("3.0 CGPA")
+
+with col4:
+    st.markdown("**End Date**")
+    st.write("2019")
+    st.write("2021")
+    st.write("Ongoing")
+
+
+col1,col2=tab2.columns(2)
+with col1:
+    st.markdown("### Industries")
+    st.write("Information Technology")
+
+with col2:
+    st.markdown("### Funtional Area")
+    st.write("Data-Engineer / Data-Analyst")
+
+
+col1,col2=tab2.columns(2)
+with col1:
+    st.markdown("### Language")
+    st.write("Urdu-Native")
+    st.write("English-Medium")
+
+with col2:
+    st.markdown("### Hobbies")
+    st.write("Technology")
+    st.write("Gaming")
+    st.write("Movies & Sports")
+
+
+#Project
+tab3.header("Projects")
+
+col1,col2,col3=tab3.columns(3)
+
+with col1:
+    st.image("/home/adil/Pictures/hangman",use_column_width=True)
+    st.markdown("### Hangman Game")
+    st.write("The Hangman game is divided into separate classes, each with its own responsibilities. This modular approach makes the code reusable, maintainable, and easier to understand.")
+    view1 = st.button("Detailed")
+    if view1:
+        st.markdown("### Key Classes and Their Roles")
+        st.write("**WordManager:**")
+        st.write("Manages the selection and handling of the secret word. Keeps track of which letters have been guessed and updates the display accordingly. Ensures the game can verify whether the word is fully guessed.")
+        st.write("**HangmanGame:**")
+        st.write("Handles the core game logic, such as managing guesses, keeping track of attempts, and checking the game's status (win, lose, or ongoing).Ensures that only valid guesses are accepted and prevents duplicate guesses.")
+        st.write("**HangmanUI**")
+        st.write("Manages interaction with the player.Displays the current state of the game (e.g., the word with guessed letters, remaining attempts).Takes user input for guesses and communicates the results (e.g., whether the guess was correct or the game is over).")
+
+
+with col2:
+    st.image("/home/adil/Pictures/ds.jpeg",use_column_width=True)
+    st.markdown("### Jobs in DS")
+    st.write("The Hangman game is divided into separate classes, each with its own responsibilities. This modular approach makes the code reusable, maintainable, and easier to understand.")
+    view2 = st.button("Detail")
+    if view2:
+        st.markdown("### Key Classes and Their Roles")
+        st.write("**WordManager:**")
+        st.write("Manages the selection and handling of the secret word. Keeps track of which letters have been guessed and updates the display accordingly. Ensures the game can verify whether the word is fully guessed.")
+        st.write("**HangmanGame:**")
+        st.write("Handles the core game logic, such as managing guesses, keeping track of attempts, and checking the game's status (win, lose, or ongoing).Ensures that only valid guesses are accepted and prevents duplicate guesses.")
+        st.write("**HangmanUI**")
+        st.write("Manages interaction with the player.Displays the current state of the game (e.g., the word with guessed letters, remaining attempts).Takes user input for guesses and communicates the results (e.g., whether the guess was correct or the game is over).")
+
+
+with col3:
+    st.image("/home/adil/Pictures/avl tree.jpeg",use_column_width=True)
+    st.markdown("### AVL Tree")
+    st.write("An AVL Tree is a type of self-balancing binary search tree (BST) named after its inventors, Adelson-Velsky and Landis. It ensures that the height of the tree remains balanced during insertions and deletions, which improves search, insertion, and deletion operations.")
+    view3 = st.button("Details")
+    if view3:
+        st.markdown("### Key Features of an AVL Tree")
+        st.write("**Binary Search Tree Property:**")
+        st.write("The left subtree contains nodes with keys smaller than the root. The right subtree contains nodes with keys greater than the root.")
+        st.write("**Balance Factor:**")
+        st.write("Each node in an AVL tree has a balance factor defined as: Balance Factor= Height of Left Subtree-Height of Right Subtree The balance factor of a node must be -1, 0, or 1 to keep the tree balanced.If the balance factor goes beyond this range, the tree is rebalanced.")
+        st.write("**Self-Balancing:**")
+        st.write("After each insertion or deletion, the AVL tree ensures balance by performing rotations (explained below).")
+        st.write("**Operations of Time Complexity:**")
+        st.write("Search, insertion, and deletion: O(log n), where n is the number of nodes.")
+
+#Skills & Certifications
+col1,col2=tab4.columns(2)
+with col1:
+    st.header("Skills")
+    skills={"C++":90,"C":90,"Adobe-Illustrator":80,"Adobe-Photoshop":80,"HTML":80,"CSS":80,"Python":70,"Knime":70,"Javascript":60,}
+    for skill,efficiency in skills.items():
+        st.write(f"**{skill}**")
+        st.progress(efficiency/100)
+with col2:
+    st.header("Intellecture Skills")
+    st.write("*Ability to work in Team Driven Enviroment.*")
+    st.write("*Effective Interpersonal skills.*")
+    st.write("*Excellent Communication skills.*")
+    st.write("*Sense of Responsibility.*")
+    st.write("*High level of Maturity.*")
+
+tab4.header("Certifications & Awards")
+col1, col2, col3 = tab4.columns(3)
+
+with col1:
+    st.write("**Title**")
+    st.write("Microsoft word 2016")
+    st.write("Web-Development & Graphic Designing")
+
+with col2:
+    st.write("**Organization**")
+    st.write("Microsoft word")
+    st.write("NAVTTC")
+   
+with col3:
+    st.write("**End-Date**")
+    st.write("2021")
+    st.write("2022")
+
+
+#Contact
+tab5.title("Contact Us")
+name=tab5.text_input("Name")
+email = tab5.text_input("Your Email")
+message = tab5.text_area("Your Message")
+if tab5.button("Submit"):
+    if name and email and message:
+        st.success("Thank you for reaching out! We will get back to you shortly.")
+    else:
+        st.error("Please fill out all fields.")
+
+
+
+st.markdown("""
+    <style>
+        [data-testid="stSidebar"] {
+            background-color: #000000; 
+        }
+
+        [data-testid="stSidebar"] h1 {
+            color: #ffffff;
+        }
+
+        [data-testid="stSidebar"] h1, [data-testid="stSidebar"] img {
+            text-align: center;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+
